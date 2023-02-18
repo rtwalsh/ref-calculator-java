@@ -6,8 +6,14 @@ import javax.swing.JTextField;
 
 public class Display {
 	
+	private JTextField field;
+	
 	public JTextField createGuiComponent() {
-		return new JTextField();
+		field = new JTextField();
+		return field;
 	}
 
+	public void update(String newText) {
+		field.setText(newText);
+	}
 }

@@ -35,4 +35,12 @@ class CalculatorTest {
 		assertNotNull(obj);
 		assertTrue(obj instanceof JTextField);
 	}
+	
+	@Test
+	void testUpdateSetsTheComponentText() {
+		JTextField field = display.createGuiComponent();
+		assertEquals("", field.getText());
+		display.update("1");
+		assertEquals("1", field.getText());
+	}
 }
