@@ -8,4 +8,7 @@ public class Calculator {
 		System.out.println("Starting the Calculator");
 	}
 
+	public void clear() {
+		
+	}
 }

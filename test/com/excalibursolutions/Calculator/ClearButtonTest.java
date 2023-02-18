@@ -13,14 +13,17 @@ import org.junit.jupiter.api.Test;
 class ClearButtonTest {
 
 	private ClearButton button;
+	private MockCalculator calculator;
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		button = new ClearButton();
+		calculator = new MockCalculator();
+		button = new ClearButton(calculator);
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
+		calculator = null;
 		button = null;
 	}
 
@@ -39,4 +42,10 @@ class ClearButtonTest {
 		assertEquals("C", btn.getText());
 	}
 
+	@Test
+	void testClickingTheButtonShouldNotifyTheCalculator() {
+		JButton btn = button.createGuiButton();
+		btn.doClick();
+		assertTrue(calculator.clearWasCalled);
+	}
 }
