@@ -4,6 +4,8 @@ package com.excalibursolutions.Calculator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import javax.swing.JTextField;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,4 +29,10 @@ class CalculatorTest {
 		assertNotNull(display);
 	}
 
+	@Test
+	void testCreateGuiComponentCreatesJTextField() {
+		Object obj = display.createGuiComponent();
+		assertNotNull(obj);
+		assertTrue(obj instanceof JTextField);
+	}
 }
