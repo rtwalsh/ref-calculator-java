@@ -47,4 +47,12 @@ class DisplayTest {
 		assertEquals(150.0, field.getPreferredSize().width, 0.001);
 		assertEquals(50.0, field.getPreferredSize().height, 0.001);
 	}
+	
+	@Test
+	void testUpdateSetsTheComponentText() {
+		JTextField field = display.createGuiComponent();
+		assertEquals("", field.getText());
+		display.update("1");
+		assertEquals("1", field.getText());
+	}
 }
