@@ -4,6 +4,8 @@ package com.excalibursolutions.Calculator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.awt.Color;
+
 import javax.swing.JButton;
 
 import org.junit.jupiter.api.AfterEach;
@@ -48,6 +50,16 @@ class ClearButtonTest {
 		assertEquals(50.0, btn.getPreferredSize().width, 0.001);
 		assertEquals(50.0, btn.getPreferredSize().height, 0.001);
 	}
+	
+	/*
+	@Test
+	void testButtonIsRed() {
+		JButton btn = button.createGuiButton();
+		assertEquals(Color.RED, btn.getBackground());
+		assertTrue(btn.isOpaque());
+		assertFalse(btn.isBorderPainted());
+	}
+	*/
 	
 	@Test
 	void testButtonDoesNotShowFocusOutline() {

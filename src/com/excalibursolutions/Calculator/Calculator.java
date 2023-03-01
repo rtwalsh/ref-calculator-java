@@ -5,12 +5,20 @@ package com.excalibursolutions.Calculator;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
 
 public class Calculator extends JFrame {
 
 	public static void main(String[] args) {
 		System.out.println("Starting the Calculator");
-		
+		/* This allows for changing the background color of components on Mac
+		try {
+			UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+		} catch(Exception e) {
+			e.printStackTrace(); 
+		}
+		*/
+
 		new Calculator();
 	}
 

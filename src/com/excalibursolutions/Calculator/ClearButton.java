@@ -2,6 +2,7 @@
 
 package com.excalibursolutions.Calculator;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,6 +22,10 @@ public class ClearButton {
 		button = new JButton("C");
 		button.setPreferredSize(new Dimension(50, 50));
 		button.setFocusPainted(false);
+		/*
+		button.setBackground(Color.RED);
+		button.setOpaque(true);
+		*/
 		
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
