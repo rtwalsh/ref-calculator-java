@@ -50,6 +50,11 @@ class ClearButtonTest {
 	}
 	
 	@Test
+	void testButtonDoesNotShowFocusOutline() {
+		JButton btn = button.createGuiButton();
+		assertFalse(btn.isFocusPainted());
+	}
+	@Test
 	void testClickingTheButtonShouldNotifyTheCalculator() {
 		JButton btn = button.createGuiButton();
 		btn.doClick();

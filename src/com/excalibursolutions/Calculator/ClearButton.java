@@ -20,6 +20,7 @@ public class ClearButton {
 	public JButton createGuiButton() {
 		button = new JButton("C");
 		button.setPreferredSize(new Dimension(50, 50));
+		button.setFocusPainted(false);
 		
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
