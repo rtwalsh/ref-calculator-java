@@ -10,6 +10,7 @@ public class Display {
 	
 	public JTextField createGuiComponent() {
 		field = new JTextField();
+		field.setEditable(false);
 		return field;
 	}
 
