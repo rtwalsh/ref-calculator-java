@@ -2,6 +2,7 @@
 
 package com.excalibursolutions.Calculator;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,6 +19,7 @@ public class ClearButton {
 	
 	public JButton createGuiButton() {
 		button = new JButton("C");
+		button.setPreferredSize(new Dimension(50, 50));
 		
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {

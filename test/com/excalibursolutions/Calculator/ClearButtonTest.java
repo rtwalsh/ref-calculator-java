@@ -43,6 +43,13 @@ class ClearButtonTest {
 	}
 
 	@Test
+	void testButtonIsTheCorrectSize() {
+		JButton btn = button.createGuiButton();
+		assertEquals(50.0, btn.getPreferredSize().width, 0.001);
+		assertEquals(50.0, btn.getPreferredSize().height, 0.001);
+	}
+	
+	@Test
 	void testClickingTheButtonShouldNotifyTheCalculator() {
 		JButton btn = button.createGuiButton();
 		btn.doClick();
